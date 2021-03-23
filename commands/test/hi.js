@@ -11,13 +11,6 @@ module.exports = {
      */
 
     run : async(client, message, args) => {
-        const msg = await message.channel.send(`🏓 Pinging...`)
-        const embed = new MessageEmbed()
-            .setTitle('Pong!')
-            .setColor("RANDOM")
-            .setDescription('hello')
-            await message.channel.send(embed)
-            msg.delete()
-
+        message.channel.send('hello')
     }
 }
