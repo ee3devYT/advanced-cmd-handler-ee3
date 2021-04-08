@@ -6,7 +6,7 @@ const client = new Client({
 })
 const mongoose = require('mongodb')
 
-mongoose.connect('your mongo db link here', { //if you dont know how to get it watch this video : https://youtu.be/eiBn1-Qx0ew
+mongoose.connect('link-here', { //if you dont know how to get it watch this video : https://youtu.be/eiBn1-Qx0ew
     useUnifiedTopology : true,
     useNewUrlParser : true,
 }).then(console.log('Connected to mongodb  ✅ '))
@@ -31,12 +31,22 @@ client.on('ready', () => {
     setInterval(() => {
         if(index === arrayOfStatus.length) index = 0;
         const status = arrayOfStatus[index];
-        console.log(status);
         client.user.setActivity(status);
         index++;
     }, 5000)
 
-    console.log(`${client.user.username} ✅`)
+    console.log(`logged in as ${client.user.username} BOT ✅`)
+    console.log('□□□□□ 0%')
+    console.log('■□□□□ 20%')
+    console.log('■■□□□ 40')
+    console.log('■■■□□ 60%')
+    console.log('■■■■□ 80%')
+    console.log('■■■■■ 100%')
+    console.log('◇────────────────◇────────────────◇')
+    console.log('𓅂 THANKS FOR USING EE3 COMMAND HANDLER')
+    console.log('◇────────────────◇────────────────◇')
+    console.log('IF YOU GET ANY ERROR DM E-E-3#4933')
+    console.log('𝗘𝗘3 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗛𝗔𝗡𝗗𝗟𝗘𝗥 𝘃10')
 })
 client.on('message', async message =>{
     if(message.author.bot) return;
@@ -51,3 +61,4 @@ client.on('message', async message =>{
     if(command) command.run(client, message, args) 
 })
 client.login(token)
+L
